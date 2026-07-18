@@ -23,7 +23,13 @@ import { Button } from "@/components/ui/button";
 import { contactEmail, whatsappUrl } from "@/lib/contact";
 import { cn } from "@/lib/utils";
 
-const navItems = ["Problem", "Services", "Process", "Packages", "Results"];
+const navItems = [
+  { label: "Problem", href: "#problem" },
+  { label: "Services", href: "#services" },
+  { label: "Process", href: "#process" },
+  { label: "Packages", href: "#packages" },
+  { label: "Impact", href: "#results" },
+];
 
 const services = [
   {
@@ -250,11 +256,11 @@ export function VpifyLanding() {
             </a>
             <div className="hidden items-center gap-1 lg:flex">
               {navItems.map((item) => (
-                <AnchorLink key={item} href={`#${item.toLowerCase()}`}>
-                  {item}
+                <AnchorLink key={item.label} href={item.href}>
+                  {item.label}
                 </AnchorLink>
               ))}
-              <AnchorLink href="/testimonials">Testimonials</AnchorLink>
+              <AnchorLink href="/work">Work</AnchorLink>
             </div>
             <div className="flex items-center gap-2">
               <Button
@@ -298,21 +304,21 @@ export function VpifyLanding() {
             >
               {navItems.map((item) => (
                 <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
+                  key={item.label}
+                  href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className="flex items-center justify-between rounded-2xl px-4 py-3 text-sm font-medium text-muted-foreground transition hover:bg-white hover:text-foreground"
                 >
-                  {item}
+                  {item.label}
                   <ChevronRight className="h-4 w-4" />
                 </a>
               ))}
               <a
-                href="/testimonials"
+                href="/work"
                 onClick={() => setMobileMenuOpen(false)}
                 className="flex items-center justify-between rounded-2xl px-4 py-3 text-sm font-medium text-muted-foreground transition hover:bg-white hover:text-foreground"
               >
-                Testimonials
+                Work
                 <ChevronRight className="h-4 w-4" />
               </a>
               <a
@@ -863,8 +869,8 @@ export function VpifyLanding() {
           <a href="#packages" className="hover:text-foreground">
             Packages
           </a>
-          <a href="/testimonials" className="hover:text-foreground">
-            Testimonials
+          <a href="/work" className="hover:text-foreground">
+            Work
           </a>
           <a href="#audit" className="hover:text-foreground">
             Free audit
