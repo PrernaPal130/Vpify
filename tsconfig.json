@@ -30,5 +30,10 @@
     ".next/types/**/*.ts",
     ".next-build/types/**/*.ts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules",
+    "components/internal-reference-showcase.tsx",
+    "components/vpify-showcase.tsx",
+    "components/vpify-showcase-config.ts"
+  ]
 }
