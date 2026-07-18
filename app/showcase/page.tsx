@@ -1,5 +1,5 @@
-import { InternalReferenceShowcase } from "@/components/internal-reference-showcase";
+import { redirect } from "next/navigation";
 
 export default function ShowcasePage() {
-  return <InternalReferenceShowcase />;
+  redirect("/work");
 }

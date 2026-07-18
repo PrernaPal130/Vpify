@@ -6,6 +6,11 @@ export const metadata: Metadata = {
   description:
     "VPify helps local businesses attract, convert, and manage more customers with premium websites, WhatsApp automation, local visibility, and business systems.",
   metadataBase: new URL("https://vpify.com"),
+  icons: {
+    icon: [{ url: "/new.png", type: "image/png" }],
+    shortcut: "/new.png",
+    apple: "/new.png"
+  },
   openGraph: {
     title: "VPify | Get more customers online",
     description:
